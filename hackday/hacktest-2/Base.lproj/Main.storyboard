@@ -59,6 +59,62 @@
             </objects>
             <point key="canvasLocation" x="244.5" y="460.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="i5c-0o-Ppp">
+            <objects>
+                <viewController id="iyZ-M1-7BM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XXD-Zw-s96"/>
+                        <viewControllerLayoutGuide type="bottom" id="w3a-wn-GvD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I3z-aO-mky">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-BV-14Z">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="My Stats" image="runrunrun" id="wGb-bR-vcJ"/>
+                                    <tabBarItem title="Challenges" image="medal" id="tKa-mr-VsS" colorLabel="IBBuiltInLabel-Orange"/>
+                                    <tabBarItem title="Community" image="community" id="UmG-8m-Cgl"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-VC-0PP">
+                                <rect key="frame" x="0.0" y="83" width="600" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="468" id="Dm1-zW-mn9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="iyZ-M1-7BM" id="GXS-kS-iQ3"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Fx-hdC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="PKJ-m7-WgP"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rch-VC-0PP" secondAttribute="trailing" id="2Im-eK-9dy"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="bottom" secondItem="pUT-BV-14Z" secondAttribute="top" id="3tw-5T-bNz"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="I3z-aO-mky" secondAttribute="leading" id="GwM-re-Lup"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="top" secondItem="Kaw-Fx-hdC" secondAttribute="bottom" constant="39" id="Jc2-F0-vaX"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="trailing" secondItem="Kaw-Fx-hdC" secondAttribute="trailing" id="PnH-WW-TuF"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="top" secondItem="I3z-aO-mky" secondAttribute="top" constant="83" id="btY-JT-XnR"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="Kaw-Fx-hdC" secondAttribute="leading" id="dUJ-bx-rN1"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="trailing" secondItem="pUT-BV-14Z" secondAttribute="trailing" id="pzf-ZS-eoR"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="pUT-BV-14Z" secondAttribute="leading" id="tFP-C0-o1O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDV-4M-D2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="445"/>
+        </scene>
     </scenes>
     <resources>
         <image name="community" width="32" height="32"/>
