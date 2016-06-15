@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kn-RI-Svn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Nwd-r4-P0j">
+            <objects>
+                <tabBarController id="4kn-RI-Svn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CYD-du-QBW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Vxn-81-X15"/>
+                        <segue destination="iyZ-M1-7BM" kind="relationship" relationship="viewControllers" id="0co-IG-yeM"/>
+                        <segue destination="16D-AX-2na" kind="relationship" relationship="viewControllers" id="Jjf-Hi-J2k"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3c-Aw-z0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="379"/>
+        </scene>
         <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -25,24 +44,12 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rxx-cr-afF" id="ujE-SX-czX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lts-sL-5bK">
-                                <rect key="frame" x="0.0" y="618" width="376" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="My Stats" image="runrunrun" id="haA-Iz-Q5Y"/>
-                                    <tabBarItem title="Challenges" image="medal" id="E5G-Nh-OXe" colorLabel="IBBuiltInLabel-Orange"/>
-                                    <tabBarItem title="Community" image="community" id="2hr-ai-O4p"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="618" width="376" height="49"/>
-                                </variation>
-                            </tabBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="My Stats" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="StateFarm red bg" translatesAutoresizingMaskIntoConstraints="NO" id="FOe-9A-fYb">
                                 <rect key="frame" x="-3" y="63" width="381" height="30"/>
                                 <color key="backgroundColor" red="0.21176470588235294" green="0.20784313725490194" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,6 +70,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My Stats" image="runrunrun" id="cX0-ll-EMc"/>
                     <navigationItem key="navigationItem" title="Title" id="btp-PF-Fa6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -71,12 +79,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392.5" y="420.5"/>
+            <point key="canvasLocation" x="478.5" y="134.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Community-->
+        <scene sceneID="b8P-rK-cON">
+            <objects>
+                <viewController id="16D-AX-2na" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z0N-sY-w8h"/>
+                        <viewControllerLayoutGuide type="bottom" id="ecY-G8-UaL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K7v-tI-yGI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Community" image="community" id="gd7-8i-3eE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRg-D3-w6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="1308"/>
+        </scene>
+        <!--Challenges-->
         <scene sceneID="i5c-0o-Ppp">
             <objects>
-                <viewController id="iyZ-M1-7BM" sceneMemberID="viewController">
+                <viewController id="iyZ-M1-7BM" customClass="ChallengesViewController" customModule="hacktest_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XXD-Zw-s96"/>
                         <viewControllerLayoutGuide type="bottom" id="w3a-wn-GvD"/>
@@ -85,49 +112,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUT-BV-14Z">
-                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Fx-hdC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <tabBarItem title="My Stats" image="runrunrun" id="wGb-bR-vcJ"/>
-                                    <tabBarItem title="Challenges" image="medal" id="tKa-mr-VsS" colorLabel="IBBuiltInLabel-Orange"/>
-                                    <tabBarItem title="Community" image="community" id="UmG-8m-Cgl"/>
+                                    <navigationItem title="Challenges" id="PKJ-m7-WgP"/>
                                 </items>
-                            </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-VC-0PP">
-                                <rect key="frame" x="0.0" y="83" width="600" height="468"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="468" id="Dm1-zW-mn9"/>
-                                </constraints>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Rch-VC-0PP">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="5rX-hT-AsC" detailTextLabel="eAt-7p-lzK" imageView="fpQ-8Y-Gjc" style="IBUITableViewCellStyleValue1" id="iKp-8f-w2J">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iKp-8f-w2J" id="W8T-rI-gkQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5rX-hT-AsC">
+                                                    <rect key="frame" x="62" y="12" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eAt-7p-lzK">
+                                                    <rect key="frame" x="523.5" y="12" width="41.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="medal" id="fpQ-8Y-Gjc">
+                                                    <rect key="frame" x="15" y="5" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="iyZ-M1-7BM" id="GXS-kS-iQ3"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Fx-hdC">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="PKJ-m7-WgP"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Rch-VC-0PP" secondAttribute="trailing" id="2Im-eK-9dy"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="bottom" secondItem="pUT-BV-14Z" secondAttribute="top" id="3tw-5T-bNz"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="I3z-aO-mky" secondAttribute="leading" id="GwM-re-Lup"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="top" secondItem="Kaw-Fx-hdC" secondAttribute="bottom" constant="39" id="Jc2-F0-vaX"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="trailing" secondItem="Kaw-Fx-hdC" secondAttribute="trailing" id="PnH-WW-TuF"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="top" secondItem="I3z-aO-mky" secondAttribute="top" constant="83" id="btY-JT-XnR"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="Kaw-Fx-hdC" secondAttribute="leading" id="dUJ-bx-rN1"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="trailing" secondItem="pUT-BV-14Z" secondAttribute="trailing" id="pzf-ZS-eoR"/>
-                            <constraint firstItem="Rch-VC-0PP" firstAttribute="leading" secondItem="pUT-BV-14Z" secondAttribute="leading" id="tFP-C0-o1O"/>
+                            <constraint firstItem="Kaw-Fx-hdC" firstAttribute="leading" secondItem="I3z-aO-mky" secondAttribute="leading" id="CFo-hq-qVL"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="top" secondItem="Kaw-Fx-hdC" secondAttribute="bottom" id="D76-Is-KTP"/>
+                            <constraint firstAttribute="trailing" secondItem="Kaw-Fx-hdC" secondAttribute="trailing" id="Fnc-TZ-eVp"/>
+                            <constraint firstItem="Kaw-Fx-hdC" firstAttribute="leading" secondItem="Rch-VC-0PP" secondAttribute="leading" id="QJf-3F-Ddb"/>
+                            <constraint firstItem="Kaw-Fx-hdC" firstAttribute="trailing" secondItem="Rch-VC-0PP" secondAttribute="trailing" id="RYF-ZM-lwi"/>
+                            <constraint firstItem="Rch-VC-0PP" firstAttribute="bottom" secondItem="w3a-wn-GvD" secondAttribute="top" id="d9X-hs-XrH"/>
+                            <constraint firstItem="Kaw-Fx-hdC" firstAttribute="top" secondItem="XXD-Zw-s96" secondAttribute="bottom" id="fKA-Tt-5SA"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Challenges" image="medal" id="b1t-Md-CJN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDV-4M-D2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="454"/>
+            <point key="canvasLocation" x="521" y="916"/>
         </scene>
     </scenes>
     <resources>

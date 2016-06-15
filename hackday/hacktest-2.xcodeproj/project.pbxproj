@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56B2CCE1D12150C00CC1514 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56B2CCD1D12150C00CC1514 /* ChallengesViewController.swift */; };
 		E128FC081D0F771D00CAC711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128FC071D0F771D00CAC711 /* AppDelegate.swift */; };
 		E128FC0A1D0F771D00CAC711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128FC091D0F771D00CAC711 /* ViewController.swift */; };
 		E128FC0D1D0F771D00CAC711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E128FC0B1D0F771D00CAC711 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56B2CCD1D12150C00CC1514 /* ChallengesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
 		E128FC041D0F771D00CAC711 /* hacktest-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hacktest-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E128FC071D0F771D00CAC711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E128FC091D0F771D00CAC711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E128FC131D0F771E00CAC711 /* Info.plist */,
 				E128FC351D0F7A4F00CAC711 /* TopicModel.swift */,
 				E128FC371D0F7A6600CAC711 /* HealthModel.swift */,
+				A56B2CCD1D12150C00CC1514 /* ChallengesViewController.swift */,
 			);
 			path = "hacktest-2";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E128FC0A1D0F771D00CAC711 /* ViewController.swift in Sources */,
+				A56B2CCE1D12150C00CC1514 /* ChallengesViewController.swift in Sources */,
 				E128FC081D0F771D00CAC711 /* AppDelegate.swift in Sources */,
 				E128FC361D0F7A4F00CAC711 /* TopicModel.swift in Sources */,
 				E128FC381D0F7A6600CAC711 /* HealthModel.swift in Sources */,
@@ -492,6 +496,7 @@
 				E128FC2E1D0F771E00CAC711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E128FC2F1D0F771E00CAC711 /* Build configuration list for PBXNativeTarget "hacktest-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				E128FC311D0F771E00CAC711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E128FC321D0F771E00CAC711 /* Build configuration list for PBXNativeTarget "hacktest-2UITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				E128FC341D0F771E00CAC711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
