@@ -1,8 +1,10 @@
+
+
+
 <?php
 
 // Create connection
-$con=mysqli_connect("localhost","username","password","dbname");
-// TODO: Databse configuration
+$con=mysqli_connect("https://wellness-hackdaysf.rhcloud.com","adminfLBpY6a","FrIM-cUtQetL","wellness_test");
 
 // Check connection
 if (mysqli_connect_errno())
@@ -12,7 +14,6 @@ if (mysqli_connect_errno())
 
 // This SQL statement selects ALL from the table 'Locations'
 $sql = "SELECT * FROM Locations";
-// TODO: replace locations with our own table
 
 // Check if there are results
 if ($result = mysqli_query($con, $sql))
@@ -32,10 +33,6 @@ if ($result = mysqli_query($con, $sql))
 
 	// Finally, encode the array to JSON and output the results
 	echo json_encode($resultArray);
-}
-else
-{
-  echo "no results found."
 }
 
 // Close connections
