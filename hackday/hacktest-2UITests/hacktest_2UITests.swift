@@ -1,14 +1,14 @@
 //
-//  hackdayUITests.swift
-//  hackdayUITests
+//  hacktest_2UITests.swift
+//  hacktest-2UITests
 //
-//  Created by Andrew Peth on 6/15/16.
-//  Copyright © 2016 State Farm. All rights reserved.
+//  Created by Andrew Peth on 6/13/16.
+//  Copyright © 2016 Andrew Peth. All rights reserved.
 //
 
 import XCTest
 
-class hackdayUITests: XCTestCase {
+class hacktest_2UITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

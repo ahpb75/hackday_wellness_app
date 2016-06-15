@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>hackday.xcscheme</key>
+		<key>hacktest-2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E128FC411D11949800CAC711</key>
+		<key>E128FC031D0F771D00CAC711</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E128FC571D11949800CAC711</key>
+		<key>E128FC171D0F771E00CAC711</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E128FC621D11949800CAC711</key>
+		<key>E128FC221D0F771E00CAC711</key>
 		<dict>
 			<key>primary</key>
 			<true/>
