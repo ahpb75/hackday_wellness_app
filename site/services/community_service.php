@@ -32,6 +32,7 @@ if ($result = mysqli_query($con, $sql))
 	}
 
 	// Finally, encode the array to JSON and output the results
+  header('Content-type: text/javascript');
 	echo json_encode($resultArray);
 }
 
