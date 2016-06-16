@@ -172,6 +172,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="iyZ-M1-7BM" id="GXS-kS-iQ3"/>
+                                    <outlet property="delegate" destination="iyZ-M1-7BM" id="pZK-a3-YYM"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Challenges" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWE-Qd-c9p">
