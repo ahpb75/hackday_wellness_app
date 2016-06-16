@@ -38,8 +38,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of feed items
+        return 5
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return feedItems.count
-        
     }
     /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
@@ -62,14 +65,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
        
         // Get the topic to be shown
-        let item: ProfileModel = feedItems[indexPath.row] as! ProfileModel
-        // Get references to labels of cell
-        myCell.textLabel?.numberOfLines = 20
-        myCell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        let item: ProfileModel = feedItems[indexPath.section] as! ProfileModel
         
-        myCell.textLabel!.text = "Welcome, \(item.fname!):\n\n\nTotal Steps: \(item.total_steps!)\n\nTotal Stairs Climbed: \(item.total_flights!)\n\nTotal Distance: \(item.total_distance!) Mile(s)\n\nTotal Points: \(item.total_points!)"
+         if indexPath.row == 0 {
+        // Get references to labels of cell
+        //myCell.textLabel?.numberOfLines = 20
+        //myCell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        
+        myCell.textLabel!.text = "Welcome, \(item.fname!)"
+        
+        }
+        
+        if indexPath.row == 1 {
+        myCell.textLabel!.text = "Total Steps: \(item.total_steps!)"
+        }
+        
+        if indexPath.row == 2 {
+        myCell.textLabel!.text = "Total Stairs Climbed: \(item.total_flights!)"
+        }
+        
+        if indexPath.row == 3 {
+            myCell.textLabel!.text = "Total Distance: \(item.total_distance!) Mile(s)"
+        }
+        
+        if indexPath.row == 4 {
+            myCell.textLabel!.text = "Total Points: \(item.total_points!)"
+        }
+        
+        //Total Stairs Climbed: \(item.total_flights!)\n\nTotal Distance: \(item.total_distance!) Mile(s)\n\nTotal Points: \(item.total_points!)"
         
         return myCell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 100
+        }
+        
+        return 44
     }
     
 }
