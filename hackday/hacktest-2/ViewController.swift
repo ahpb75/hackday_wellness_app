@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HealthModelProtocal  {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, HomeModelProtocal  {
     
     //Properties
     
     var feedItems: NSArray = NSArray()
-    var selectedTopic : TopicModel = TopicModel()
+    var selectedTopic : ProfileModel = ProfileModel()
     @IBOutlet weak var listTableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,9 +24,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        let healthModel = HealthModel()
-        healthModel.delegate = self
-        healthModel.downloadItems()
+        let homeModel = HomeModel()
+        homeModel.delegate = self
+        homeModel.downloadItems()
         
     }
     
@@ -41,12 +41,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return feedItems.count
         
     }
-    
+    /*
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
        
-            let item: TopicModel = feedItems[indexPath.row] as! TopicModel
+            let item: ProfileModel = feedItems[indexPath.row] as! ProfileModel
             // create the alert
-            let alert = UIAlertController(title: item.topic, message: item.details, preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: item., message: item.details, preferredStyle: UIAlertControllerStyle.Alert)
         
             // add an action (button)
             alert.addAction(UIAlertAction(title: "Let's do it!", style: UIAlertActionStyle.Default, handler: nil))
@@ -54,16 +54,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // show the alert
             self.presentViewController(alert, animated: true, completion: nil)
         
-    }
+    }*/
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+       
         // Get the topic to be shown
-        let item: TopicModel = feedItems[indexPath.row] as! TopicModel
+        let item: ProfileModel = feedItems[indexPath.row] as! ProfileModel
         // Get references to labels of cell
-        myCell.textLabel!.text = item.topic
+        myCell.textLabel?.numberOfLines = 20
+        myCell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        
+        myCell.textLabel!.text = "Welcome, \(item.fname!):\n\n\nTotal Steps: \(item.total_steps!)\n\nTotal Stairs Climbed: \(item.total_flights!)\n\nTotal Distance: \(item.total_distance!) Mile(s)\n\nTotal Points: \(item.total_points!)"
         
         return myCell
     }

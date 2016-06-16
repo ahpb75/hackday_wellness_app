@@ -1,28 +1,28 @@
 //
-//  HealthModel.swift
+//  HomeModel.swift
 //  hacktest-2
 //
-//  Created by Andrew Peth on 6/13/16.
+//  Created by Andrew Peth on 6/15/16.
 //  Copyright © 2016 Andrew Peth. All rights reserved.
 //
 
 import Foundation
 
-protocol HealthModelProtocal: class {
+protocol HomeModelProtocal: class {
     func itemsDownloaded(items: NSArray)
 }
 
 
-class HealthModel: NSObject, NSURLSessionDataDelegate {
+class HomeModel: NSObject, NSURLSessionDataDelegate {
     
     //properties
     
-    weak var delegate: HealthModelProtocal!
+    weak var delegate: HomeModelProtocal!
     
     var data : NSMutableData = NSMutableData()
     
-    let urlPath: String = "http://localhost/service.php";
-
+    let urlPath: String = "http://wellness-hackdaysf.rhcloud.com/site/profile_service.php";
+    
     func downloadItems() {
         
         let url: NSURL = NSURL(string: urlPath)!
@@ -67,38 +67,40 @@ class HealthModel: NSObject, NSURLSessionDataDelegate {
         }
         
         var jsonElement: NSDictionary = NSDictionary()
-        let topics: NSMutableArray = NSMutableArray()
+        let profile: NSMutableArray = NSMutableArray()
         
         for(var i = 0; i < jsonResult.count; i += 1)
         {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let myTopic = TopicModel()
+            let myProfile = ProfileModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let id = jsonElement["id"] as? String,
-                let topic = jsonElement["topic"] as? String,
-                let details = jsonElement["details"] as? String,
-                let date = jsonElement["date"] as? String
+            if let fname = jsonElement["fname"] as? String,
+                let total_steps = jsonElement["total_steps"] as? String,
+                let total_flights = jsonElement["total_flights"] as? String,
+                let total_points = jsonElement["total_points"] as? String,
+                let total_distance = jsonElement["total_distance"] as? String
             {
-                myTopic.id = id
-                myTopic.topic = topic
-                myTopic.details = details
-                myTopic.date = date
-              
+                myProfile.fname = fname
+                myProfile.total_steps = total_steps
+                myProfile.total_flights = total_flights
+                myProfile.total_points = total_points
+                myProfile.total_distance = total_distance
+                
                 
                 
                 
             }
             
-            topics.addObject(myTopic)
+            profile.addObject(myProfile)
             
         }
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            self.delegate.itemsDownloaded(topics)
+            self.delegate.itemsDownloaded(profile)
             
         })
     }
