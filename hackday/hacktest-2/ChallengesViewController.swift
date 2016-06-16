@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ChallengesViewController: UIViewController, UITableViewDataSource {
-    
+class ChallengesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     let cardioChallenges = [
         ("5 Days of Steps", "Walk 10,000 steps each day for 5 days", "50"),
         ("3 Days of Excercise", "Exercise for 30 minutes for 3 days", "40"),
@@ -37,6 +37,8 @@ class ChallengesViewController: UIViewController, UITableViewDataSource {
         ("3 Days of 2 Flights", "Walk up 2 flights of stairs for 3 days", "15"),
         ("5 Days of Stairs", "Avoid using the elevator or escalators by taking the stairs for 5 days", "30")
     ]
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 5
     }
@@ -63,33 +65,48 @@ class ChallengesViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
         if indexPath.section == 0 {
-            let (challengeTitle, challengeDescription, challengePoints) = cardioChallenges[indexPath.row]
+            let (challengeTitle, _, challengePoints) = cardioChallenges[indexPath.row]
             cell.textLabel?.text = challengeTitle
             cell.detailTextLabel?.text = challengePoints
             
-        
+            let myImage = UIImage(named: "running")
+            cell.imageView?.image = myImage
         }
         if indexPath.section == 1 {
-            let (challengeTitle, challengeDescription, challengePoints) = weightsChallenges[indexPath.row]
-            cell.textLabel?.text = challengeTitle
-            cell.detailTextLabel?.text = challengePoints
-        }
-        if indexPath.section == 2 {
-            let (challengeTitle, challengeDescription, challengePoints) = dietChallenges[indexPath.row]
-            cell.textLabel?.text = challengeTitle
-            cell.detailTextLabel?.text = challengePoints
-        }
-        if indexPath.section == 3 {
-            let (challengeTitle, challengeDescription, challengePoints) = meditationChallenges[indexPath.row]
-            cell.textLabel?.text = challengeTitle
-            cell.detailTextLabel?.text = challengePoints
-        }
-        if indexPath.section == 4 {
-            let (challengeTitle, challengeDescription, challengePoints) = stepsChallenges[indexPath.row]
+            let (challengeTitle, _, challengePoints) = weightsChallenges[indexPath.row]
             cell.textLabel?.text = challengeTitle
             cell.detailTextLabel?.text = challengePoints
             
+            let myImage = UIImage(named: "weight")
+            cell.imageView?.image = myImage
         }
+        if indexPath.section == 2 {
+            let (challengeTitle, _, challengePoints) = dietChallenges[indexPath.row]
+            cell.textLabel?.text = challengeTitle
+            cell.detailTextLabel?.text = challengePoints
+            
+            let myImage = UIImage(named: "silverware")
+            cell.imageView?.image = myImage
+        }
+        
+        if indexPath.section == 3 {
+            let (challengeTitle, _, challengePoints) = meditationChallenges[indexPath.row]
+            cell.textLabel?.text = challengeTitle
+            cell.detailTextLabel?.text = challengePoints
+            
+            let myImage = UIImage(named: "meditation")
+            cell.imageView?.image = myImage
+        }
+    
+        if indexPath.section == 4 {
+            let (challengeTitle, _, challengePoints) = stepsChallenges[indexPath.row]
+            cell.textLabel?.text = challengeTitle
+            cell.detailTextLabel?.text = challengePoints
+                
+            let myImage = UIImage(named: "staircase")
+            cell.imageView?.image = myImage
+        }
+        
         
         return cell
     }
@@ -112,11 +129,47 @@ class ChallengesViewController: UIViewController, UITableViewDataSource {
             return "Steps"
         }
     }
+
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let data: (String, String, String)
+        
+        switch indexPath.section {
+        case 0:
+            data = cardioChallenges[indexPath.row]
+        case 1:
+            data = weightsChallenges[indexPath.row]
+        case 2:
+            data = dietChallenges[indexPath.row]
+        case 3:
+            data = meditationChallenges[indexPath.row]
+        default:
+            data = stepsChallenges[indexPath.row]
+        }
+        
+        
+        let myAlert = UIAlertController(title: data.0, message: data.1, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        // add the actions (buttons)
+        myAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
+            // Do button stuff here
+            
+            indexPath
+        }))
+
+        myAlert.addAction(UIAlertAction(title: "Subscribe", style: UIAlertActionStyle.Cancel, handler: { (UIAlertAction) in
+            //
+        }))
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
