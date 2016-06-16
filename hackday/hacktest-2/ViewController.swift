@@ -12,17 +12,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Properties
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var stepLabel: UILabel!
+    @IBOutlet weak var flightLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    
+    
     var feedItems: NSArray = NSArray()
     var selectedTopic : ProfileModel = ProfileModel()
-    @IBOutlet weak var listTableView: UITableView!
+//    @IBOutlet weak var listTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //set delegates and initialize homeModel
         
-        self.listTableView.delegate = self
-        self.listTableView.dataSource = self
+//        self.listTableView.delegate = self
+//        self.listTableView.dataSource = self
         
         let homeModel = HomeModel()
         homeModel.delegate = self
@@ -33,7 +42,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
-        self.listTableView.reloadData()
+        let model = feedItems.firstObject as! ProfileModel
+        
+        if let name = model.fname {
+            nameLabel.text = "Welcome \(name),"
+        } else {
+            nameLabel.text = "Welcome Unknown"
+        }
+        
+        if let steps = model.total_steps {
+            stepLabel.text = "Total Steps: \(steps)"
+        } else {
+            stepLabel.text = "Unknown"
+        }
+        
+        if let flights = model.total_flights {
+            flightLabel.text = "Total Flights: \(flights)"
+        } else {
+            flightLabel.text = "Welcome Unknown"
+        }
+        
+        if let distance = model.total_distance {
+            distanceLabel.text = "Total Distance: \(distance) Mile(s)"
+        } else {
+            distanceLabel.text = "Welcome Unknown"
+        }
+        
+        if let points = model.total_points{
+            pointsLabel.text = "Total Points: \(points)"
+        } else {
+            pointsLabel.text = "Welcome Unknown"
+        }
+        
+       
+        
+        
+        
+        
+//        self.listTableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
