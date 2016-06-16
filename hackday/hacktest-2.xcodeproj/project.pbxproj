@@ -17,6 +17,8 @@
 		E128FC281D0F771E00CAC711 /* hacktest_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128FC271D0F771E00CAC711 /* hacktest_2UITests.swift */; };
 		E128FC361D0F7A4F00CAC711 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128FC351D0F7A4F00CAC711 /* TopicModel.swift */; };
 		E128FC381D0F7A6600CAC711 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E128FC371D0F7A6600CAC711 /* HealthModel.swift */; };
+		E12A15E01D12331900610240 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A15DF1D12331900610240 /* ProfileModel.swift */; };
+		E12A15E21D12332400610240 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12A15E11D12332400610240 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		E128FC291D0F771E00CAC711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E128FC351D0F7A4F00CAC711 /* TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
 		E128FC371D0F7A6600CAC711 /* HealthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
+		E12A15DF1D12331900610240 /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E12A15E11D12332400610240 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		E128FC061D0F771D00CAC711 /* hacktest-2 */ = {
 			isa = PBXGroup;
 			children = (
+				E12A15E11D12332400610240 /* HomeModel.swift */,
+				E12A15DF1D12331900610240 /* ProfileModel.swift */,
 				E128FC071D0F771D00CAC711 /* AppDelegate.swift */,
 				E128FC0B1D0F771D00CAC711 /* Main.storyboard */,
 				E128FC091D0F771D00CAC711 /* ViewController.swift */,
@@ -268,6 +274,8 @@
 				E128FC0A1D0F771D00CAC711 /* ViewController.swift in Sources */,
 				A56B2CCE1D12150C00CC1514 /* ChallengesViewController.swift in Sources */,
 				E128FC081D0F771D00CAC711 /* AppDelegate.swift in Sources */,
+				E12A15E21D12332400610240 /* HomeModel.swift in Sources */,
+				E12A15E01D12331900610240 /* ProfileModel.swift in Sources */,
 				E128FC361D0F7A4F00CAC711 /* TopicModel.swift in Sources */,
 				E128FC381D0F7A6600CAC711 /* HealthModel.swift in Sources */,
 			);
