@@ -67,7 +67,7 @@ class ChallengesViewController: UIViewController, UITableViewDataSource {
             cell.textLabel?.text = challengeTitle
             cell.detailTextLabel?.text = challengePoints
             
-            let myImage = UIImage(named:)
+        
         }
         if indexPath.section == 1 {
             let (challengeTitle, challengeDescription, challengePoints) = weightsChallenges[indexPath.row]
