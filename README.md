@@ -6,6 +6,6 @@ FitFarm focuses on building a community that enables healthy lifestyle choices b
 
 1) view and track their personal health stats fed from the iPhone Health API
 2) search for and subscribe to community challenges in various health categories
-3) view the enterprise's daily progress, join groups to team up with others, and attend events that support the local community.
+3) view the enterprise's daily progress, team up with others via groups, and attend local community events to work toward goals.
 
 Please see the .mp4 for an app walkthrough and presentation.
